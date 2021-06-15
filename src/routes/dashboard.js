@@ -14,6 +14,14 @@ function isAuthorized(req, res, next) {
 }
 
 router.get('/', isAuthorized, (req, res) => {
+	res.render('dashboard');
+});
+
+router.get('/', isAuthorized, (req, res) => {
+	res.sendStatus(200);
+});
+
+router.get('/settings', isAuthorized, (req, res) => {
 	res.sendStatus(200);
 });
 
